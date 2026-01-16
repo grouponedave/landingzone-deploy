@@ -8,8 +8,8 @@ $ErrorActionPreference = "Stop"
 # ===============================
 # Configuration
 # ===============================
-$githubUser = "grouponedave"
-$githubRepo = "landingzone-deploy"
+$githubUser = "YOUR-GITHUB-USERNAME"
+$githubRepo = "YOUR-REPO-NAME"
 $githubBranch = "main"
 $templateBase = "https://raw.githubusercontent.com/$githubUser/$githubRepo/$githubBranch/templates"
 $mainTemplate = "$templateBase/main.bicep"
