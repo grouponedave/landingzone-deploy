@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "clientId": {
+      "value": "ABC"
+    },
+    "tenantDomain": {
+      "value": "contoso.com"
+    },
+    "location": {
+      "value": "westus2"
+    },
+    "adminUsername": {
+      "value": "management"
+    },
+    "adminPassword": {
+      "reference": {
+        "keyVault": {
+          "id": "/subscriptions/{subscription-id}/resourceGroups/{rg-name}/providers/Microsoft.KeyVault/vaults/{vault-name}"
+        },
+        "secretName": "sonicwall-admin-password"
+      }
+    },
+    "vmSize": {
+      "value": "Standard_D2s_v5"
+    }
+  }
+}
